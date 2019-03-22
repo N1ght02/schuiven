@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <title>Schuiven</title>
+  <meta name="author" content="Flint Naafs">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<style>
+
+#toggleMenu:checked ~ main {
+  margin-left: 12em;
+}
+#toggleLabel::before {
+ cursor: pointer;
+
+}
+
+nav {
+  position: fixed;
+}
+
+main {
+  position: absolute;
+  margin-left: 0;
+  transition: margin-left .6s cubic-bezier(.21,.6,.58,1.5);
+}
+
+</style>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav2").style.width = "1700px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav2").style.width = "0";
+
+  function myFunction(x) {
+    x.classList.toggle("change");
+  }
+}
+</script>
+
+</head>
+
+
+<input type="checkbox" id="toggleMenu">
+
+<div id="mySidenav2" class="sidenav2">
+
+  <div class="closebtn2" onclick="closeNav()">&times;
+  </div>
+
+<div>
+  <h4 id="menu">Menu</h4>
+  <ul class="sidenav_ul2">
+    <li>
+      <a href="index.html" >De Inhoud schuift</a>
+    </li>
+    <li>
+      <a href="menu.html" > Het Menu schuift</a>
+    </li>
+    <li>
+      <a href="menualles.html" class="active">Alles schuift</a>
+    </li>
+  </ul>
+  </div>
+</div>
+
+<main>
+
+  <div class="container" onclick="openNav()">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+  </div>
+
+<h1>Tyler</h1>
+  <p><img src="img/tyler2.png" alt="Tyler"></p>
+
+<div class="info">
+<p>Pellentesque enim magna, hendrerit id consectetur ac, cursus non orci. Phasellus sed porttitor est, nec ullamcorper nisi. Morbi urna nisi, vestibulum nec sollicitudin vel, cursus quis arcu. Sed eget turpis in lorem condimentum hendrerit. Morbi porttitor erat lorem, lobortis pellentesque augue pretium sed. Fusce sit amet accumsan odio. Vivamus maximus erat at convallis finibus. Morbi quis dignissim leo, eu venenatis erat. Proin non massa iaculis, mollis velit sit amet, convallis leo. Quisque bibendum eleifend metus vitae auctor. Cras ut gravida sapien. Cras velit ex, consequat quis interdum vel, varius ac elit. Donec interdum, sapien a eleifend facilisis, odio dolor suscipit risus, eu viverra diam neque vel magna. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam ornare varius tellus et tempus.</p>
+
+</div>
+
+
+<footer>
+<div class="validatie">
+<a href="http://validator.w3.org/check?uri=referer" target="_blank">
+    <img src="https://blanken5.home.xs4all.nl/afb/valid-html5-blue.png" alt="Valide HTML5"></a>
+<a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank">
+    <img src="http://jigsaw.w3.org/css-validator/images/vcss-blue.gif" alt="Valide CSS">
+</a>
+</div>
+</footer>
+
+</main>
+
+</body>
+</html>
